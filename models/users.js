@@ -1,6 +1,5 @@
 const mongoose =require('mongoose');
 const Schema = mongoose.Schema;
-var bcrypt = require('bcryptjs');
 const usersSchema= new mongoose.Schema({
     name:{
         type:String,
@@ -12,7 +11,7 @@ const usersSchema= new mongoose.Schema({
     },
     pincode: {
         type: Number,
-        required: true,
+        required: false,
     },
     mobile:{
         type:Number,
@@ -24,11 +23,11 @@ const usersSchema= new mongoose.Schema({
       }, 
      location: {
         type: Number,
-        required: true
+        required: false
       },
-     role: {
-        enum: ['user', 'admin'],
-        required: true,
+      mobileOtp: {
+        type: Number,
+        required: false,
       }
 })
 
