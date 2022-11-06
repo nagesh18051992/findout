@@ -5,7 +5,7 @@ const app = express()
 const router = require('./routes/router');
 const mongoose = require('mongoose');
 const { Router } = require('express');
-mongoose.connect('mongodb://localhost:27017/findOut',{ useNewUrlParser: true })
+mongoose.connect('mongodb://127.0.0.1:27017/findOut',{ useNewUrlParser: true })
 const db = mongoose.connection
 
 db.on('error', (error) => console.error(error))
