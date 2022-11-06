@@ -16,4 +16,4 @@ app.use("*",cors())
 app.use('/api/v1', require('./routes/router'))
 
 app.use(bodyParser.json());
-app.listen(3001, () => console.log('Server Started'))
+app.listen(80, () => console.log('Server Started'))
